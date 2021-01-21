@@ -25,3 +25,16 @@ CREATE TABLE `eat_food`
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='食物';
+
+CREATE TABLE `eat_random_setting`
+(
+    `id`           int(11)      NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `user_id`      varchar(256) NOT NULL COMMENT '登录人id',
+    `classify_id`  int(11)      NOT NULL DEFAULT '0' COMMENT '分类id;0=默认',
+    `random_count` int(11)      NOT NULL COMMENT '随机选择数量',
+    `delete_id`    int(11)      NOT NULL DEFAULT '0' COMMENT '逻辑删除id',
+    `create_time`  datetime     NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增时间',
+    `modify_time`  timestamp    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间(数据库自动维护)',
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8 COMMENT ='随机选择设置';
