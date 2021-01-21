@@ -11,7 +11,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="tk.mybatis.mapper.common.MySqlMapper"/>
+            <property name="mappers" value="com.pighome.eat.base.dao.MyMapper"/>
         </plugin>
 
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
@@ -27,9 +27,8 @@
         <javaClientGenerator targetPackage="com.pighome.eat.dao" targetProject="src/main/java"
                 type="XMLMAPPER"/>
 
-        <table tableName="eat_classification"/>
+        <table tableName="eat_random_setting"/>
         <!--mysql 配置-->
         <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
-        <table tableName="eat_food"/>
     </context>
 </generatorConfiguration>
