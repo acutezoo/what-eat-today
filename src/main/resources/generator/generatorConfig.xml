@@ -11,7 +11,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.nuonuo.accounting.manage.common.dao.MyMapper"/>
+            <property name="mappers" value="tk.mybatis.mapper.common.MySqlMapper"/>
         </plugin>
 
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
@@ -20,16 +20,16 @@
                 password="${spring.datasource.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.nuonuo.accounting.manage.enterprise.dataobject.cloud30user" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.pighome.eat.dataobject" targetProject="src/main/java"/>
 
-        <sqlMapGenerator targetPackage="mapper.enterprise" targetProject="src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
 
-        <javaClientGenerator targetPackage="com.nuonuo.accounting.manage.enterprise.dao.cloud30user" targetProject="src/main/java"
-                             type="XMLMAPPER"/>
+        <javaClientGenerator targetPackage="com.pighome.eat.dao" targetProject="src/main/java"
+                type="XMLMAPPER"/>
 
-        <table tableName="order_invoice_snap">
-            <!--mysql 配置-->
-            <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
-        </table>
+        <table tableName="eat_classification"/>
+        <!--mysql 配置-->
+        <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <table tableName="eat_food"/>
     </context>
 </generatorConfiguration>
