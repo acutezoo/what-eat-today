@@ -35,8 +35,4 @@ build/
 *.jar
 *.war
 *.ear
-src/main/java/com/pighome/eat/controller/
-src/main/java/com/pighome/eat/dao/
-src/main/java/com/pighome/eat/dataobject/
-src/main/java/com/pighome/eat/service/
-src/main/resources/mapper/
+
